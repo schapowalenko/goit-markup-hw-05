@@ -127,13 +127,17 @@ body{
     margin-left: auto;
 }
 .contact-icons{
-    
+    fill: var(--icon-color);
     margin-right: 10px;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
      
 }
 
 
-.contact-nav .item :hover{
+.contact-nav .item:hover .contact-icons,
+.contact-nav .item:focus .contact-icons {
     fill: var(--accent-color);
 }
 .contact-nav .link{
@@ -215,8 +219,11 @@ body{
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 .modal-button{
+    
     position: absolute;
     top: 8px;
     right: 8px;
@@ -233,8 +240,11 @@ body{
 .backdrop.is-hidden {
     opacity: 0;
     pointer-events: none;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing);
 }
 .modal{
+    
     position: absolute;
     top: 50%;
     left: 50%;
@@ -310,7 +320,11 @@ body{
     width: 370px;
     margin: 0;
     text-align: center;
-    padding: 27px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 370px;
+    min-height: 70px;
     background: rgba(47, 48, 58, 0.8);
     color: var(--primary-white-color);
     font-weight: 700;
@@ -381,10 +395,12 @@ body{
     transition-duration: 250ms;
     transition-timing-function: var(--timing);
 }
-.team-icon-link:hover{
+.team-icon-link:hover,
+.team-icon-link:focus{
     background-color:var(--accent-color);
 }
-.team-icon-link:hover .item-img-icon{
+.team-icon-link:hover .item-img-icon,
+.team-icon-link:focus .item-img-icon{
     fill: var(--primary-white-color);
     
 }
@@ -494,10 +510,15 @@ body{
     transition-duration: 250ms;
     transition-timing-function: var(--timing)
 }
-.client-icon-link:hover {
+.client-icon-link:hover .item-img-icon,
+.client-icon-link:focus .item-img-icon{
+    fill: var(--accent-color);
     
-    border:1px solid var(--accent-color);
     
+}
+.client-icon-link:hover,
+.client-icon-link:focus{
+   border: 1px solid var(--accent-color);
 }
 .item-img-icon{
     
@@ -505,9 +526,6 @@ body{
     transition-property: fill, border;
     transition-duration: 250ms;
     transition-timing-function: var(--timing)
-}
-.item-img-icon:hover{
-fill: var(--accent-color);
 }
 
 
@@ -541,9 +559,10 @@ fill: var(--accent-color);
 
 
 
-.project-link .item:hover{
+.project-link .item:hover,
+.project-link .item:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-     transition-property: box-shadow;
+    transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: var(--timing);
 }
@@ -642,7 +661,8 @@ fill: var(--accent-color);
 }
 
 /* КНОПКА */
-.button-hero:hover{
+.button-hero:hover,
+.button-hero:focus{
     background-color: var(--btn-hover-hero);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
@@ -810,10 +830,12 @@ fill: var(--accent-color);
     transition-duration: 250ms;
     transition-timing-function: var(--timing);
 }
-.footer-icon-link:hover{
+.footer-icon-link:hover,
+.footer-icon-link:focus{
     background-color:var(--accent-color);
 }
-.footer-icon-link:hover .footer-img-icon{
+.footer-icon-link:hover .footer-img-icon,
+.footer-icon-link:focus .footer-img-icon{
     fill: var(--primary-white-color);
     
 }
